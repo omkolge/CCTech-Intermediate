@@ -38,7 +38,6 @@ double divFunc(double num1, double num2)
     {
         div = num1 / num2;
     }
-
     cout << "Division is : " << div << endl;
     return div;
 }
