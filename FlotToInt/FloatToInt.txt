@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <float.h>
+#include <inttypes.h>
+#include <limits.h>
+
+using namespace std;
+void floatToIntFunc(float float_val)
+{
+    int int_val;
+    int_val = float_val;
+    cout<<int_val<<endl;
+    
+}
+
+int main()
+{
+    cout<<fixed;
+    floatToIntFunc(61665353215.3535);
+    return 0;
+}
