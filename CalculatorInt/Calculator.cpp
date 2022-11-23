@@ -94,12 +94,12 @@ void addFunc(long long int number_1, long long int number_2)
         else
         {
             addition = number_1 + number_2;
-            cout << "\nsum : " << addition;
+            cout << "\nAddition : " << addition;
         }
     }
     else
     {
-        cout << "\nAddition: " << number_1 + number_2;
+        cout << "\nAddition : " << number_1 + number_2;
     }
 }
 
@@ -115,7 +115,7 @@ void substractFunc(long long int number_1, long long int number_2)
         diff = number_1 - (number_2);
     }
     cout << endl
-         << "substraction : " << number_1 - (number_2);
+         << "Subtraction : " << number_1 - (number_2);
 }
 
 void multiplicationFunc(long long int number_1, long long int number_2)
@@ -140,7 +140,7 @@ int divisionFunc(long long int number_1, long long int number_2)
     }
     else
     {
-        cout << "\nDivision is :- " << number_1 / number_2 << endl;
+        cout << "\nDivision :- " << number_1 / number_2 << endl;
         return number_1 / number_2;
     }
 }

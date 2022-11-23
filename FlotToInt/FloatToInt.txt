@@ -6,17 +6,42 @@
 #include <limits.h>
 
 using namespace std;
-void floatToIntFunc(float float_val)
-{
-    int int_val;
-    int_val = float_val;
-    cout<<int_val<<endl;
-    
-}
+
+void floatToInt(float float_val);
+
+void intToFloat(int int_val);
 
 int main()
 {
     cout<<fixed;
-    floatToIntFunc(61665353215.3535);
+    floatToInt(6215.3535);
+    intToFloat(1023);
     return 0;
+}
+
+void floatToInt(float float_val)
+{
+     int int_val;
+    if (isnan(float_val) ||size_t(INT_MAX) < log2f(fabsf(float_val)) || (float_val != 0.0F && fabsf(float_val) < FLT_MIN))
+    {
+        throw runtime_error("conversion failed");
+    }
+    else
+    {
+        int_val = float_val;
+        cout<<int_val<<endl;
+    }
+}
+void intToFloat(int int_val)
+{
+    float float_val;
+    if (isnan(int_val) ||size_t(FLT_MAX) < log2f(abs(int_val)) || (int_val != 0 && abs(int_val) < INT_MIN))
+    {
+        throw runtime_error("conversion failed");
+    }
+     else
+    {
+        float_val= int_val ;
+        cout<<setprecision(2)<<float_val<<endl;
+    }
 }
