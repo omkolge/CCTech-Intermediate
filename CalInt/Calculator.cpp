@@ -106,7 +106,6 @@ void addFunc(long long int number_1, long long int number_2)
 void substractFunc(long long int number_1, long long int number_2)
 {
     signed int diff;
-    // if ((number2 > 0 && number1 < __DBL_MIN__ + number2) || (number2 < 0 && number1 < __DBL_MIN__ + number2))
     if ((number_2 > 0 && number_1 < -2147483648 + number_2) || (number_2 < 0 && number_1 < -2147483648 + number_2))
     {
         throw runtime_error("Math error: Out of range");
