@@ -19,6 +19,7 @@ void divisionFunc(double number_1, double number_2);
 
 int main()
 {
+    cout << fixed;
     try
     {
         bool exit = false;
@@ -88,7 +89,6 @@ void checkRange(double num1, double num2)
 
 void addFunc(double number_1, double number_2)
 {
-    //cout << fixed;
     if ((number_1 >= DBL_MAX && number_2 > 0) || (number_2 >= DBL_MAX && number_1 > 0))
     {
         double addition = 0;
