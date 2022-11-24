@@ -30,7 +30,7 @@ int main()
             cout << "\nfor multiplication enter 3";
             cout << "\nfor division enter 4 ";
             cout << "\nfor exit enter 0";
-            cout << "\n\n Enter your choice => ";
+            cout << "\n\n Enter your choice = ";
             cin >> ch;
             switch (ch)
             {
@@ -39,21 +39,21 @@ int main()
                     break;
 
                 case 1:
-                    cout << "Enter the two numbers - " << endl;
+                    cout << "Enter the two numbers :- " << endl;
                     cin >> num1 >> num2;
                     checkRange(num1, num2);
                     addFunc(num1, num2);
                     break;
 
                 case 2:
-                    cout << "Enter the two numbers - " << endl;
+                    cout << "Enter the two numbers :- " << endl;
                     cin >> num1 >> num2;
                     checkRange(num1, num2);
                     substractFunc(num1, num2);
                     break;
 
                 case 3:
-                    cout << "Enter the two numbers - " << endl;
+                    cout << "Enter the two numbers :- " << endl;
                     cin >> num1 >> num2;
                     checkRange(num1, num2);
                     multiplicationFunc(num1, num2);
@@ -86,20 +86,26 @@ void addFunc(long long int number_1, long long int number_2)
 {
     if ((number_1 >= 4294967295 && number_2 > 0) || (number_2 >= 4294967295 && number_1 > 0))
     {
-        unsigned int addition = 0;
-        if ((addition = number_1 + number_2) >= 4294967295)
+        if ((number_1 + number_2) >= 4294967295)
         {
-            throw runtime_error("Math error: Out of range");
+            throw runtime_error("Overflow");
         }
         else
         {
-            addition = number_1 + number_2;
-            cout << "\nAddition : " << addition;
+            cout << "\nAddition : " << number_1 + number_2;
         }
     }
     else
     {
-        cout << "\nAddition : " << number_1 + number_2;
+        long long int sum;
+        sum=number_1 + number_2;
+        if((number_1 + number_2)<=INT_MAX && (number_1 + number_2)>=INT_MIN){
+            cout << "\nAddition : " << number_1 + number_2;
+        }else
+        {
+            throw runtime_error("Overflow!");
+        }
+        
     }
 }
 
