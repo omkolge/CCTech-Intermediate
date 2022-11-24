@@ -9,7 +9,7 @@ SimpleInterest::SimpleInterest(double principal, double rate, double year)
     this->year = year;
 }
 
-double SimpleInterest::calculateSI()
+void SimpleInterest::calculateSI()
 {
 
     if (principal == 0 || rate == 0 || year == 0)
@@ -19,7 +19,6 @@ double SimpleInterest::calculateSI()
             << "Principal : " << abs(principal) << endl
             << "Interest : 0" << endl
             << "Total Value : " << abs(principal);
-       return principal;
     }
     else
     {
@@ -30,6 +29,5 @@ double SimpleInterest::calculateSI()
             << "Principal : " << abs(principal) << endl
             << "Interest : " << abs(simpleInterest) << endl
             << "Total Value : " << abs(simpleInterest + principal);
-        return (simpleInterest + principal);
     }
 }

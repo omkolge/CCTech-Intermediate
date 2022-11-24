@@ -16,5 +16,5 @@ public:
 
     SimpleInterest(double principal, double rate, double year);
 
-    double calculateSI();
+    void calculateSI();
 };

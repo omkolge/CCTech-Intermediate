@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-int permute(string &word, int left, int right)
+int anagramFunc(string &word, int left, int right)
 {
 
     if (left == right)
@@ -14,7 +14,7 @@ int permute(string &word, int left, int right)
         {
             swap(word[left], word[i]);
 
-            permute(word, left + 1, right);
+            anagramFunc(word, left + 1, right);
 
             swap(word[left], word[i]);
         }

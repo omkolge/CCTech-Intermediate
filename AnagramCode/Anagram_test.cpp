@@ -7,7 +7,8 @@ int main()
 {
 	string word = "biro";
 	int len = word.size();
-	assert(!permute(word, 0, len - 1));
+	assert(!anagramFunc(word, 0, len - 1));
+	assert(anagramFunc(word, 0, len - 1));
 
 	return 0;
 }
