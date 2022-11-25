@@ -18,7 +18,7 @@ int main()
 
 bool isLeapYear(int year)
 {
-    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+    if (year>0 && ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)))
     {
         cout << year << " is leap year " << endl;
         return true;

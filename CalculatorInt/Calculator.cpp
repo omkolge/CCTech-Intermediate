@@ -30,7 +30,7 @@ int main()
             cout << "\nfor multiplication enter 3";
             cout << "\nfor division enter 4 ";
             cout << "\nfor exit enter 0";
-            cout << "\n\n Enter your choice = ";
+            cout << "\n\n Enter your choice :- ";
             cin >> ch;
             switch (ch)
             {
@@ -88,7 +88,7 @@ void addFunc(long long int number_1, long long int number_2)
     {
         if ((number_1 + number_2) >= 4294967295)
         {
-            throw runtime_error("Overflow");
+            throw runtime_error("Overflow! : Addition Out of Range");
         }
         else
         {
@@ -103,7 +103,7 @@ void addFunc(long long int number_1, long long int number_2)
             cout << "\nAddition : " << number_1 + number_2;
         }else
         {
-            throw runtime_error("Overflow!");
+            throw runtime_error("Overflow! : Addition Out of Range");
         }
         
     }
@@ -114,7 +114,7 @@ void substractFunc(long long int number_1, long long int number_2)
     signed int diff;
     if ((number_2 > 0 && number_1 < -2147483648 + number_2) || (number_2 < 0 && number_1 < -2147483648 + number_2))
     {
-        throw runtime_error("Math error: Out of range");
+        throw runtime_error("Overflow! : Subtraction Out of range");
     }
     else
     {
@@ -129,7 +129,7 @@ void multiplicationFunc(long long int number_1, long long int number_2)
     long long int mult = number_1 * number_2;
     if ((mult > 4294967295) || (mult < -2147483648))
     {
-        throw runtime_error("Math error: Out of range");
+        throw runtime_error("Overflow! : Multiplication Out of range");
     }
     else
     {
@@ -141,7 +141,7 @@ int divisionFunc(long long int number_1, long long int number_2)
 {
     if (number_2 == 0 || ((number_1 == INT_MIN) && (number_2 == -1)))
     {
-        throw runtime_error("Math error: Out of range");
+        throw runtime_error("Overflow : Division Out of range");
         return 0;
     }
     else

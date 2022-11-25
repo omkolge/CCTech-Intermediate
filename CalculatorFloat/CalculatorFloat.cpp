@@ -33,7 +33,7 @@ int main()
             cout << "\nfor multiplication enter 3";
             cout << "\nfor division enter 4 ";
             cout << "\nfor exit enter 0";
-            cout << "\n\n Enter your choice => ";
+            cout << "\n\n Enter your choice :- ";
             cin >> ch;
             switch (ch)
             {
@@ -94,7 +94,7 @@ void addFunc(double number_1, double number_2)
         double addition = 0;
         if ((addition = number_1 + number_2) >= DBL_MAX)
         {
-            throw runtime_error("Math error: Out of range");
+            throw runtime_error("Math error: Addition Out of range");
         }
         else
         {
@@ -113,14 +113,14 @@ void substractFunc(double number_1, double number_2)
     double diff;
     if ((number_2 > 0 && number_1 < DBL_MIN + number_2) || (number_2 < 0 && number_1 < DBL_MIN + number_2))
     {
-        throw runtime_error("Math error: Out of range");
+        throw runtime_error("Math error: Subtraction Out of range");
     }
     else
     {
         diff = number_1 - number_2;
     }
     cout << endl
-        << "substraction : " << diff;
+        << "subtraction : " << diff;
 }
 
 void multiplicationFunc(double number_1, double number_2)
@@ -128,7 +128,7 @@ void multiplicationFunc(double number_1, double number_2)
     double mult = number_1 * number_2;
     if ((mult > DBL_MAX) || (mult < DBL_MIN))
     {
-        throw runtime_error("Math error: Out of range");
+        throw runtime_error("Math error: Multiplication Out of range");
     }
     else
     {
@@ -140,7 +140,7 @@ void divisionFunc(double number_1, double number_2)
 {
     if (number_2 == 0 || ((number_1 == DBL_MIN) && (number_2 == -1)))
     {
-        throw runtime_error("Math error: Out of range");
+        throw runtime_error("Math error: Division Out of range");
     }
     else
     {
