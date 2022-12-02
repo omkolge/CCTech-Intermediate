@@ -5,7 +5,7 @@ Test Strategy
 2. User give the input.
 3. Check only for the digit.
 
-*********************** Test cases *************************
+Test cases
 1. If user give input 0
 Output : Zero has not a square root 
 
