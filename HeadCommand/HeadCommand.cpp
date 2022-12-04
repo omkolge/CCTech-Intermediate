@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
     {
         for (int i = 1; i < argc; i++)
         {
-            string line;
-            vector<string> lines;
+            string cmd;
+            vector<string> cmdV;
             int count = 0;
 
             ifstream infile(argv[i]);
@@ -26,25 +26,25 @@ int main(int argc, char *argv[])
             }
             else
             {
-                while (getline(infile, line))
+                while (getline(infile, cmd))
                 {
-                    lines.push_back(line);
+                    cmdV.push_back(cmd);
                 }
             }
-            if (lines.size() > 10)
+            if (cmdV.size() > 10)
             {
-                cout << "==> " << argv[1] << " <==" << endl;
+                cout << "--> " << argv[1] << " <--" << endl;
                 for (int i = 0; i < 10; i++)
                 {
-                    cout << lines.at(i) << endl;
+                    cout << cmdV.at(i) << endl;
                 }
             }
             else
             {
-                cout << "==> " << argv[1] << " <==" << endl;
-                for (int i = 0; i < lines.size(); i++)
+                cout << "--> " << argv[1] << " <--" << endl;
+                for (int i = 0; i < cmdV.size(); i++)
                 {
-                    cout << lines.at(i) << endl;
+                    cout << cmdV.at(i) << endl;
                 }
             }
         }

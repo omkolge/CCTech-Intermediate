@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
     }
     else if (argc > 1)
     {
-        string line;
-        vector<string> lines;
+        string cmd;
+        vector<string> cmdV;
         int count = 0;
         for (int i = 1; i < argc; i++)
         {
@@ -29,17 +29,17 @@ int main(int argc, char *argv[])
             }
             else
             {
-                while (getline(infile, line))
+                while (getline(infile, cmd))
                 {
-                    lines.push_back(line);
+                    cmdV.push_back(cmd);
                 }
             }
         }
             if (count == 0)
             {
-                sort(lines.begin(), lines.end());
-                for (int i = 0; i < lines.size(); i++)
-                    cout << lines.at(i) << endl;
+                sort(cmdV.begin(), cmdV.end());
+                for (int i = 0; i < cmdV.size(); i++)
+                    cout << cmdV.at(i) << endl;
             }
         
     }
