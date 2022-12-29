@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string echoCommand(string argv)
+string echo_Command(string argv)
 {
     string output_string = "";
     if (argv == "")
@@ -22,28 +22,4 @@ string echoCommand(string argv)
     }
 
     return argv;
-}
-
-bool echo_Command(string argv)
-{
-    if (argv == "")
-    {
-        cout << endl;
-        return true;
-    }
-    else if (argv == "Foo")
-    {
-        cout << endl
-             << argv << endl;
-        return true;
-    }
-    else if (argv == "Foo Command")
-    {
-        cout << argv << endl;
-        return true;
-    }
-    else
-    {
-        return false;
-    }
 }
